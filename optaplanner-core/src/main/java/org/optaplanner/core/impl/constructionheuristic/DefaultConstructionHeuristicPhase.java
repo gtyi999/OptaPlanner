@@ -73,6 +73,8 @@ public class DefaultConstructionHeuristicPhase<Solution_> extends AbstractPhase<
             ConstructionHeuristicStepScope<Solution_> stepScope = new ConstructionHeuristicStepScope<>(phaseScope);
             stepStarted(stepScope);
             decider.decideNextStep(stepScope, placement);
+            System.out.println("11111DefaultConstructionHeuristicPhase stepScope.getStep()=" + stepScope.getStep());
+
             if (stepScope.getStep() == null) {
                 if (termination.isPhaseTerminated(phaseScope)) {
                     logger.trace("{}    Step index ({}), time spent ({}) terminated without picking a nextStep.",
@@ -119,18 +121,21 @@ public class DefaultConstructionHeuristicPhase<Solution_> extends AbstractPhase<
 
     @Override
     public void solvingStarted(SolverScope<Solution_> solverScope) {
+        System.out.println("DefaultConstructionHeuristicPhase solvingStarted 111");
         super.solvingStarted(solverScope);
         entityPlacer.solvingStarted(solverScope);
         decider.solvingStarted(solverScope);
     }
 
     public void phaseStarted(ConstructionHeuristicPhaseScope<Solution_> phaseScope) {
+        System.out.println("DefaultConstructionHeuristicPhase phaseStarted");
         super.phaseStarted(phaseScope);
         entityPlacer.phaseStarted(phaseScope);
         decider.phaseStarted(phaseScope);
     }
 
     public void stepStarted(ConstructionHeuristicStepScope<Solution_> stepScope) {
+        System.out.println("DefaultConstructionHeuristicPhase stepStarted");
         super.stepStarted(stepScope);
         entityPlacer.stepStarted(stepScope);
         decider.stepStarted(stepScope);

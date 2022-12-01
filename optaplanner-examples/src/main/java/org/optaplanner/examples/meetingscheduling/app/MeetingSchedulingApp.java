@@ -30,6 +30,7 @@ public class MeetingSchedulingApp extends CommonApp<MeetingSchedule> {
     public static final String DATA_DIR_NAME = "meetingscheduling";
 
     public static void main(String[] args) {
+        System.out.println("main 111111111111111111111111111111111");
         prepareSwingEnvironment();
         new MeetingSchedulingApp().init();
     }
@@ -39,10 +40,12 @@ public class MeetingSchedulingApp extends CommonApp<MeetingSchedule> {
                 "Assign meetings a starting time and a room.",
                 SOLVER_CONFIG, DATA_DIR_NAME,
                 MeetingSchedulingPanel.LOGO_PATH);
+        System.out.println("MeetingSchedulingApp 22222222222222222222222");
     }
 
     @Override
     protected MeetingSchedulingPanel createSolutionPanel() {
+        System.out.println("MeetingSchedulingPanel createSolutionPanel 11111111111111");
         return new MeetingSchedulingPanel();
     }
 

@@ -2,7 +2,7 @@
 
 #####  OptaPlanner 中文版
 
-https://www.optaplanner.org/[www.optaplanner.org
+https://www.optaplanner.org
 
 ##### 编译说明
 
@@ -17,6 +17,7 @@ https://www.optaplanner.org/[www.optaplanner.org
 
 ##### 启动运行
 mvn clean install -DskipTests=true
+
 cd optaplanner-examples
 
 mvn exec:java

@@ -67,6 +67,7 @@ public abstract class CommonApp<Solution_> extends LoggingMain {
      * For example, NurseRosteringPanel is incompatible with Mac.
      */
     public static void prepareSwingEnvironment() {
+        System.out.println("prepareSwingEnvironment 111111");
         SwingUncaughtExceptionHandler.register();
         SwingUtils.fixateLookAndFeel();
     }
@@ -81,6 +82,7 @@ public abstract class CommonApp<Solution_> extends LoggingMain {
     protected SolutionBusiness<Solution_> solutionBusiness;
 
     protected CommonApp(String name, String description, String solverConfigResource, String dataDirName, String iconResource) {
+        System.out.println("CommonApp 11111111111111111");
         this.name = name;
         this.description = description;
         this.solverConfigResource = solverConfigResource;

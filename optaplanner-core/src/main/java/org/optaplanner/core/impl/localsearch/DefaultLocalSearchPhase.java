@@ -64,11 +64,14 @@ public class DefaultLocalSearchPhase<Solution_> extends AbstractPhase<Solution_>
         LocalSearchPhaseScope<Solution_> phaseScope = new LocalSearchPhaseScope<>(solverScope);
         phaseStarted(phaseScope);
 
+        //终止 isPhaseTerminated
         while (!termination.isPhaseTerminated(phaseScope)) {
             LocalSearchStepScope<Solution_> stepScope = new LocalSearchStepScope<>(phaseScope);
             stepScope.setTimeGradient(termination.calculatePhaseTimeGradient(phaseScope));
             stepStarted(stepScope);
             decider.decideNextStep(stepScope);
+            System.out.println("111111DefaultLocalSearchPhase stepScope.getStep()=" + stepScope.getStep());
+
             if (stepScope.getStep() == null) {
                 if (termination.isPhaseTerminated(phaseScope)) {
                     logger.trace("{}    Step index ({}), time spent ({}) terminated without picking a nextStep.",

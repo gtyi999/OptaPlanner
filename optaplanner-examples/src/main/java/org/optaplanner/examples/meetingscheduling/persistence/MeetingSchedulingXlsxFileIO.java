@@ -66,6 +66,7 @@ import org.optaplanner.examples.meetingscheduling.domain.TimeGrain;
 
 public class MeetingSchedulingXlsxFileIO extends AbstractXlsxSolutionFileIO<MeetingSchedule> {
 
+    //读excel文件
     @Override
     public MeetingSchedule read(File inputScheduleFile) {
         try (InputStream in = new BufferedInputStream(new FileInputStream(inputScheduleFile))) {

@@ -60,6 +60,7 @@ import org.optaplanner.swing.impl.TangoColorFactory;
 
 public abstract class AbstractXlsxSolutionFileIO<Solution_> implements SolutionFileIO<Solution_> {
 
+    //每个字段使用final，保证创建实例后无法修改任何字段。
     public static final DateTimeFormatter DAY_FORMATTER = DateTimeFormatter.ofPattern("E yyyy-MM-dd", Locale.ENGLISH);
     public static final DateTimeFormatter MONTH_FORMATTER = DateTimeFormatter.ofPattern("MMM yyyy", Locale.ENGLISH);
     public static final DateTimeFormatter TIME_FORMATTER = DateTimeFormatter.ofPattern("HH:mm", Locale.ENGLISH);

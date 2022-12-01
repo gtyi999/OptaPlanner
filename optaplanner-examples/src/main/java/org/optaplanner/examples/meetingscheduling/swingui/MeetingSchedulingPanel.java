@@ -67,6 +67,7 @@ public class MeetingSchedulingPanel extends SolutionPanel<MeetingSchedule> {
     private final OvertimeTimeGrain OVERTIME_TIME_GRAIN = new OvertimeTimeGrain();
 
     public MeetingSchedulingPanel() {
+        System.out.println("MeetingSchedulingPanel 1111111111");
         setLayout(new BorderLayout());
         JTabbedPane tabbedPane = new JTabbedPane();
         roomsPanel = new TimeTablePanel<>();

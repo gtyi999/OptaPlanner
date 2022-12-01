@@ -47,6 +47,7 @@ public class NurseRosteringApp extends CommonApp<NurseRoster> {
                 NurseRosteringPanel.LOGO_PATH);
     }
 
+    //重载方法
     @Override
     protected NurseRosteringPanel createSolutionPanel() {
         return new NurseRosteringPanel();

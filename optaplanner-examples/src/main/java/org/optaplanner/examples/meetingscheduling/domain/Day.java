@@ -23,6 +23,7 @@ import java.util.Locale;
 import org.optaplanner.examples.common.domain.AbstractPersistable;
 import org.optaplanner.examples.common.swingui.components.Labeled;
 
+//具体的class去实现一个interface时，需要使用implements关键字
 public class Day extends AbstractPersistable implements Labeled {
 
     private int dayOfYear;

@@ -180,6 +180,8 @@ public class DefaultSolver<Solution_> extends AbstractSolver<Solution_> {
         super.solvingStarted(solverScope);
         int startingSolverCount = solverScope.getStartingSolverCount() + 1;
         solverScope.setStartingSolverCount(startingSolverCount);
+
+        System.out.println("DefaultSolver solvingStarted 11111111111");
         logger.info("Solving {}: time spent ({}), best score ({}), environment mode ({}), random ({}).",
                 (startingSolverCount == 1 ? "started" : "restarted"),
                 solverScope.calculateTimeMillisSpentUpToNow(),
@@ -190,12 +192,14 @@ public class DefaultSolver<Solution_> extends AbstractSolver<Solution_> {
 
     @Override
     public void solvingEnded(SolverScope<Solution_> solverScope) {
+        System.out.println("DefaultSolver solvingEnded 111111");
         super.solvingEnded(solverScope);
         solverScope.endingNow();
     }
 
     public void outerSolvingEnded(SolverScope<Solution_> solverScope) {
         // Must be kept open for doProblemFactChange
+        System.out.println("outerSolvingEnded 1111111");
         solverScope.getScoreDirector().close();
         logger.info("Solving ended: time spent ({}), best score ({}), score calculation speed ({}/sec),"
                 + " phase total ({}), environment mode ({}).",
